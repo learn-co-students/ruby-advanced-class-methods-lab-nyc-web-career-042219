@@ -45,7 +45,7 @@ def self.alphabetical
 end
 
 def self.new_from_filename(file_name)
-  file_name.slice! ".mp3"
+  file_name.slice! (-4..-1)
   file = file_name.split(" - ")
   song = self.new
   song.name = file[1]
